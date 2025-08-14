@@ -555,6 +555,7 @@ body {
 }
 @media (max-width: 61.99875em){
   .menu__body {
+    background: rgba(128, 132, 138, 0.3);
     -webkit-backdrop-filter: blur(1.875rem);
     backdrop-filter: blur(1.875rem);
     position: fixed;
@@ -565,7 +566,6 @@ body {
     overflow: auto;
     transition: left 0.3s;
     padding: 7.5rem 0.9375rem 1.875rem 0.9375rem;
-    background: rgba(128, 132, 138, 0.3);
   }
   .menu__body::before {
     content: "";
