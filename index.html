@@ -10,10 +10,12 @@
 		<link rel="preload" href="./assets/fonts/Gotham-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/shortcut.svg">
 		<title>Миг (сеть пунктов выдачи)</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1755192804209"></script>
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1755262180725"></script>
 		<link rel="modulepreload" crossorigin="" href="./js/app.min.js">
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755192804209">
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1755192804209">
+		<link rel="modulepreload" crossorigin="" href="./js/map.min.js">
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755262180725">
+		<link rel="stylesheet" crossorigin="" href="./css/account-data.min.css?v=1755262180725">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1755262180725">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -94,7 +96,7 @@
 								</div>
 								<a href="#" data-fls-button="" class="blockhead__button button button--fw">оформить доставку</a>
 							</div>
-							<img class="hero__image" src="./assets/img/hero.jpg" alt="Image">
+							<div class="hero__animation" id="animation"></div>
 						</div>
 						<div class="hero__advantages advantages-hero">
 							<div class="advantages-hero__item advantages-hero__item--icon-box">
@@ -368,7 +370,7 @@
 								<summary class="spollers__title spollers__title--icon-arrow">Обязательно ли использовать WB-кошелек или Ozon-карту для оплаты?</summary>
 								<div class="spollers__body">
 									<p>
-										Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur autem nesciunt perspiciatis porro dolor reiciendis, sit consequuntur assumenda quia eaque error. Id consequatur, quaerat praesentium aut doloremque repellat atque exercitationem.
+										Нет, использование WB-кошелька или Ozon-карты не является обязательным. Вы можете выбрать любой удобный способ оплаты. Однако имейте в виду, что при оплате с помощью указанных средств могут предоставляться дополнительные бонусы.
 									</p>
 								</div>
 							</details>
@@ -377,8 +379,11 @@
 									Почему крупногабаритные товары не доставляются в ПВЗ с бесплатной доставкой Ozon?
 								</summary>
 								<div class="spollers__body">
-									<p>Оплата доставки при получении товаров в пункте выдачи в Донецке.</p>
-									<p>Способы оплаты: наличные, перевод на карту.</p>
+									<p>
+										Такие товары доставляются курьерской службой Ozon и недоступны для получения на территории ДНР. Для оформления заказа и доставки крупногабаритных товаров вы можете воспользоваться услугами наших партнеров
+										<a target="_blank" href="https://iva-delivery.ru">https://iva-delivery.ru</a>
+										.
+									</p>
 								</div>
 							</details>
 							<details class="spollers__item">
@@ -387,10 +392,7 @@
 								</summary>
 								<div class="spollers__body">
 									<p>
-										Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur autem nesciunt perspiciatis porro dolor reiciendis, sit consequuntur assumenda quia eaque error. Id consequatur, quaerat praesentium aut doloremque repellat atque exercitationem.
-									</p>
-									<p>
-										Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur autem nesciunt perspiciatis porro dolor reiciendis, sit consequuntur assumenda quia eaque error. Id consequatur, quaerat praesentium aut doloremque repellat atque exercitationem.
+										Нет, к сожалению, переоформление доставки на другой пункт выдачи невозможно. Однако вы можете обратиться в нашу службу технической поддержки — мы поможем уточнить адрес ПВЗ, на который был отправлен ваш заказ, и постараемся найти товар, если он был утерян или направлен по ошибке.
 									</p>
 								</div>
 							</details>
@@ -398,25 +400,23 @@
 								<summary class="spollers__title spollers__title--icon-arrow">Почему я не могу получить товар, когда на пункте происходит выгрузка?</summary>
 								<div class="spollers__body">
 									<p>
-										Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur autem nesciunt perspiciatis porro dolor reiciendis, sit consequuntur assumenda quia eaque error. Id consequatur, quaerat praesentium aut doloremque repellat atque exercitationem.
+										Во время выгрузки товара курьером выдача заказов в ПВЗ может быть временно ограничена или приостановлена. Это необходимо для сохранности товаров и проведения технических процедур — например, возвратной перевозки, передачи возвратов, оформления документов и пр. После завершения выгрузки выдача возобновится в ближайшее время.
 									</p>
 								</div>
 							</details>
 							<details class="spollers__item">
 								<summary class="spollers__title spollers__title--icon-arrow">Можете ли вы оформить заказ за меня, чтобы я оплатил его при получении на ПВЗ?</summary>
 								<div class="spollers__body">
-									<p>Оплата доставки при получении товаров в пункте выдачи в Донецке.</p>
-									<p>Способы оплаты: наличные, перевод на карту.</p>
+									<p>
+										Нет, оформление и оплата заказа осуществляется клиентом самостоятельно через маркетплейс. Это важно для прозрачности сделки и возможности последующего возврата или обращения к продавцу. Мы, в свою очередь, готовы проконсультировать вас, помочь с оформлением заказа или возврата.
+									</p>
 								</div>
 							</details>
 							<details class="spollers__item">
 								<summary class="spollers__title spollers__title--icon-arrow">Почему стоимость доставки в приложении WB выше, чем итоговая цена товаров?</summary>
 								<div class="spollers__body">
 									<p>
-										Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur autem nesciunt perspiciatis porro dolor reiciendis, sit consequuntur assumenda quia eaque error. Id consequatur, quaerat praesentium aut doloremque repellat atque exercitationem.
-									</p>
-									<p>
-										Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur autem nesciunt perspiciatis porro dolor reiciendis, sit consequuntur assumenda quia eaque error. Id consequatur, quaerat praesentium aut doloremque repellat atque exercitationem.
+										При расчете доставки операторам не отображаются ваши персональные скидки, промокоды или акции продавца. Поэтому сумма рассчитывается исходя из полной стоимости товаров, указанной в приложении без учета бонусных программ.
 									</p>
 								</div>
 							</details>
