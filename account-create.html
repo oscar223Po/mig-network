@@ -10,13 +10,14 @@
 		<link rel="preload" href="./assets/fonts/Gotham-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/shortcut.svg">
 		<title>Миг (личный кабинет)</title>
-		<script type="module" crossorigin="" src="./js/app.min.js?v=1755281243639"></script>
-		<script type="module" crossorigin="" src="./js/base.min.js?v=1755281243639"></script>
-		<script type="module" crossorigin="" src="./js/popup.min.js?v=1755281243639"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755281243639">
-		<link rel="stylesheet" crossorigin="" href="./css/base.min.css?v=1755281243639">
-		<link rel="stylesheet" crossorigin="" href="./css/popup.min.css?v=1755281243639">
-		<link rel="stylesheet" crossorigin="" href="./css/account-data.min.css?v=1755281243639">
+		<script type="module" crossorigin="" src="./js/account-create.min.js?v=1755281243638"></script>
+		<link rel="modulepreload" crossorigin="" href="./js/app.min.js">
+		<link rel="modulepreload" crossorigin="" href="./js/base.min.js">
+		<link rel="modulepreload" crossorigin="" href="./js/popup.min.js">
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755281243638">
+		<link rel="stylesheet" crossorigin="" href="./css/base.min.css?v=1755281243638">
+		<link rel="stylesheet" crossorigin="" href="./css/popup.min.css?v=1755281243638">
+		<link rel="stylesheet" crossorigin="" href="./css/account-create.min.css?v=1755281243638">
 	</head>
 	<body body-aside="">
 		<div class="wrapper">
@@ -67,51 +68,43 @@
 							<button data-fls-dynamic=".aside__mb-link, 767.98" type="button" class="aside__button aside__button--icon-log-out">Выйти с аккаунта</button>
 						</div>
 					</aside>
-					<div class="accaunt__content data">
-						<h2 class="data__title data__title--title-26">Данные пользователя</h2>
-						<div class="data__body">
-							<div class="data__block">
-								<div class="data__label">Контактная информация</div>
-								<div class="data__inputs">
-									<div class="data__input">
-										<span>Имя</span>
-										<input data-fls-input="" autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Введите имя" class="data__input input">
-									</div>
-									<div class="data__input">
-										<span>Фамилия</span>
-										<input data-fls-input="" autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Введите фамилию" class="data__input input">
-									</div>
-									<div class="data__input">
-										<span>Телефон</span>
-										<input data-fls-input="" autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Введите телефон" class="data__input input">
-									</div>
-									<div class="data__input">
-										<span>Почта</span>
-										<input data-fls-input="" autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Введите почту" class="data__input input">
-									</div>
-								</div>
+					<div class="accaunt__content create">
+						<h2 class="create__title create__title--title-26">Создание заказа</h2>
+						<!-- Ссылка отмены -->
+						<a href="#" class="cancel-link" id="cancelLink">Отменить оформление</a>
+						<!-- Шапка шагов -->
+						<div class="steps">
+							<div class="step" data-step="1">
+								<div class="step-number">01</div>
+								<div class="step-text">Выбор маркетплейса</div>
 							</div>
-							<div class="data__block">
-								<div class="data__label">Пункты выдачи</div>
-								<div class="data__inputs">
-									<div class="data__input">
-										<span>Имя</span>
-										<input data-fls-input="" autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Введите имя" class="data__input input">
-									</div>
-									<div class="data__input">
-										<span>Фамилия</span>
-										<input data-fls-input="" autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Введите фамилию" class="data__input input">
-									</div>
-									<div class="data__input">
-										<span>Телефон</span>
-										<input data-fls-input="" autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Введите телефон" class="data__input input">
-									</div>
-									<div class="data__input">
-										<span>Почта</span>
-										<input data-fls-input="" autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Введите почту" class="data__input input">
-									</div>
-								</div>
+							<div class="step" data-step="2">
+								<div class="step-number">02</div>
+								<div class="step-text">Информация о заказе</div>
 							</div>
+							<div class="step" data-step="3">
+								<div class="step-number">03</div>
+								<div class="step-text">Выбор ПВЗ</div>
+							</div>
+						</div>
+						<!-- Контент шагов -->
+						<div class="step-content active" id="content1">
+							<h2>Шаг 1</h2>
+						</div>
+						<div class="step-content" id="content2">
+							<h2>Шаг 2</h2>
+						</div>
+						<div class="step-content" id="content3">
+							<h2>Шаг 3</h2>
+						</div>
+						<!-- Кнопки -->
+						<div class="buttons">
+							<div class="checkbox" id="checkboxContainer" style="display:none;">
+								<input type="checkbox" id="agree">
+								<label for="agree">Согласен на обработку данных</label>
+							</div>
+							<button id="prevBtn" style="display:none;">Назад</button>
+							<button id="nextBtn">Далее</button>
 						</div>
 					</div>
 				</div>
