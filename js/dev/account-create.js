@@ -3,8 +3,8 @@ import "./base.min.js";
 import "./popup.min.js";
 let currentStep = 1;
 const totalSteps = 3;
-const steps = document.querySelectorAll(".step");
-const contents = document.querySelectorAll(".step-content");
+const steps = document.querySelectorAll(".head-steps__step");
+const contents = document.querySelectorAll(".content-steps__body");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 const checkboxContainer = document.getElementById("checkboxContainer");
@@ -57,3 +57,11 @@ cancelLink.addEventListener("click", (e) => {
   }
 });
 updateForm();
+const links = document.querySelectorAll(".content-steps__link");
+links.forEach((link) => {
+  link.addEventListener("click", function(e) {
+    e.preventDefault();
+    document.querySelector(".content-steps__link--active")?.classList.remove("content-steps__link--active");
+    this.classList.add("content-steps__link--active");
+  });
+});
