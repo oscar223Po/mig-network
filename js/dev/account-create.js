@@ -1,4 +1,5 @@
-import { a as slideUp, s as slideToggle } from "./app.min.js";
+import "./app.min.js";
+import { a as slideUp, s as slideToggle } from "./dynamic.min.js";
 import "./base.min.js";
 import "./popup.min.js";
 let formValidate = {

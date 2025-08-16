@@ -181,6 +181,7 @@
   line-height: 1.2;
 }
 .head-steps {
+  min-width: 0;
   display: flex;
   row-gap: 0.9375rem;
   position: relative;
@@ -340,6 +341,9 @@
   .content-steps__link {
     padding: 0.625rem 1.25rem;
   }
+  .content-steps__noth {
+    padding: 0.5rem 0.75rem;
+  }
 }
 @media (max-width: 29.99875em){
   .head-steps {
@@ -453,8 +457,8 @@
 }
 @media (min-width: 29.99875em){
   .head-steps {
-    overflow-x: visible;
-    overflow-y: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
   }
   .head-steps__step:not(:last-child)::after {
     content: "";
