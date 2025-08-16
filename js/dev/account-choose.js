@@ -1,3 +1,8 @@
+import "./app.min.js";
+import "./tabs.min.js";
+import "./base.min.js";
+import "./popup.min.js";
+import "./dynamic.min.js";
 function __awaiter(thisArg, _arguments, P, generator) {
   function adopt(value) {
     return value instanceof P ? value : new P(function(resolve) {

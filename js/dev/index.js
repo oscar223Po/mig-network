@@ -1,6 +1,6 @@
 import "./app.min.js";
+import "./tabs.min.js";
 import { d as dataMediaQueries, s as slideToggle, a as slideUp, b as bodyLockToggle, c as bodyLockStatus } from "./dynamic.min.js";
-import "./map.min.js";
 /* empty css         */
 const video = document.querySelector(".video__inner");
 const videoButton = document.querySelector(".video__button");
@@ -20895,14 +20895,6 @@ const animationData = {
   ip,
   assets
 };
-const links = document.querySelectorAll(".block-adres__link-city");
-links.forEach((link) => {
-  link.addEventListener("click", function(e) {
-    e.preventDefault();
-    document.querySelector(".block-adres__link-city--active")?.classList.remove("block-adres__link-city--active");
-    this.classList.add("block-adres__link-city--active");
-  });
-});
 const container = document.getElementById("animation");
 lottie.loadAnimation({
   container,

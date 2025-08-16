@@ -10,13 +10,14 @@
 		<link rel="preload" href="./assets/fonts/Gotham-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/shortcut.svg">
 		<title>Миг (сеть пунктов выдачи)</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1755342910387"></script>
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1755367309765"></script>
 		<link rel="modulepreload" crossorigin="" href="./js/app.min.js">
 		<link rel="modulepreload" crossorigin="" href="./js/dynamic.min.js">
-		<link rel="modulepreload" crossorigin="" href="./js/map.min.js">
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755342910387">
-		<link rel="stylesheet" crossorigin="" href="./css/map.min.css?v=1755342910387">
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1755342910387">
+		<link rel="modulepreload" crossorigin="" href="./js/tabs.min.js">
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755367309765">
+		<link rel="stylesheet" crossorigin="" href="./css/tabs.min.css?v=1755367309765">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1755367309765">
+		<link rel="stylesheet" crossorigin="" href="./css/main.min.css?v=1755367309765">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -430,59 +431,185 @@
 					<div class="adres__container">
 						<h2 class="adres__title adres__title--title-56">Список адресов для заказа</h2>
 						<div class="adres__body">
-							<div class="adres__content">
-								<div class="adres__block block-adres">
-									<ul class="block-adres__city">
-										<li>
-											<a href="#" class="block-adres__link-city block-adres__link-city--active">Москва</a>
-										</li>
-										<li>
-											<a href="#" class="block-adres__link-city">Киров</a>
-										</li>
-										<li>
-											<a href="#" class="block-adres__link-city">Кандалакша</a>
-										</li>
-										<li>
-											<a href="#" class="block-adres__link-city">Новгород</a>
-										</li>
-										<li>
-											<a href="#" class="block-adres__link-city">Новосибирск</a>
-										</li>
-									</ul>
-									<ul class="block-adres__locate">
-										<li>
-											<a href="#" class="block-adres__link-locate block-adres__link-locate--icon-location">Улица Университетская, д. 34</a>
-										</li>
-										<li>
-											<a href="#" class="block-adres__link-locate block-adres__link-locate--icon-location">Проспект Гурова, д. 27</a>
-										</li>
-										<li>
-											<a href="#" class="block-adres__link-locate block-adres__link-locate--icon-location">Улица Первомайсккая, д. 34</a>
-										</li>
-										<li>
-											<a href="#" class="block-adres__link-locate block-adres__link-locate--icon-location">Проспект Мира, д. 34</a>
-										</li>
-										<li>
-											<a href="#" class="block-adres__link-locate block-adres__link-locate--icon-location">Проспект Гурова, д. 27</a>
-										</li>
-									</ul>
-									<div class="block-adres__timework">
-										Режим работы
-										<span>Каждый день с 9:00 до 18:00</span>
+							<div class="adres__aside">
+								<div data-fls-tabs="" class="adres__tabs tabs-adres">
+									<nav data-fls-tabs-titles="" class="tabs-adres__navigation">
+										<button type="button" class="tabs-adres__title --tab-active">Донецк</button>
+										<button type="button" class="tabs-adres__title">Мариуполь</button>
+										<button type="button" class="tabs-adres__title">Макеевка</button>
+										<button type="button" class="tabs-adres__title">Новоазовск</button>
+										<button type="button" class="tabs-adres__title">Комсомольское</button>
+										<button type="button" class="tabs-adres__title">Харцызск</button>
+										<button type="button" class="tabs-adres__title">Волноваха</button>
+										<button type="button" class="tabs-adres__title">Докучаевск</button>
+									</nav>
+									<div data-fls-tabs-body="" class="tabs-adres__content">
+										<div class="tabs-adres__body">
+											<ul class="tabs-adres__list">
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">ул. Вышнеградского, 25</a>
+												</li>
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">ул. Майская, 18б</a>
+												</li>
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">ул. Минская, 2</a>
+												</li>
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">ул. Независимости, 29в</a>
+												</li>
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">ул. Тополевая, 88</a>
+												</li>
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">ул. Прожекторная, 3</a>
+												</li>
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">ул. Щетинина, 21</a>
+												</li>
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">ул. Большая магистральная, 18</a>
+												</li>
+											</ul>
+											<div class="tabs-adres__work">
+												Режим работы
+												<span>Донецк (“Каждый день с 9.00 до 19.00”)</span>
+											</div>
+										</div>
+										<div class="tabs-adres__body">
+											<ul class="tabs-adres__list">
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">пр-кт Металлургов, 94</a>
+												</li>
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">пр-кт Адмирала Лунина, 31</a>
+												</li>
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">пр-кт Ильича, 138</a>
+												</li>
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">ул. Фонтанная, 68</a>
+												</li>
+											</ul>
+											<div class="tabs-adres__work">
+												Режим работы
+												<span>Мариуполь (“Каждый день с 9.00 до 17.45”)</span>
+											</div>
+										</div>
+										<div class="tabs-adres__body">
+											<ul class="tabs-adres__list">
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">ул. Рябцева, 1а</a>
+												</li>
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">пр-кт Генерала Данилова, 71б</a>
+												</li>
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">мк-рн Зелёный, 6а</a>
+												</li>
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">ул. Ленина, 152</a>
+												</li>
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">ул. Ленина, 85</a>
+												</li>
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">ул. Коккинаки, 60</a>
+												</li>
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">ул. Кронштадтская, д.75</a>
+												</li>
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">ул. Николаева, 14</a>
+												</li>
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">ул. Московская, 64</a>
+												</li>
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">ул. Московская, 18</a>
+												</li>
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">квартал Химик, 8</a>
+												</li>
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">ул. Кремлёвская, 43</a>
+												</li>
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">ул. 250 лет Донбасса, 8а</a>
+												</li>
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">мк-рн Зелёный, 63а</a>
+												</li>
+											</ul>
+											<div class="tabs-adres__work">
+												Режим работы
+												<span>Макеевка (“Каждый день с 9.00 до 17.45”)</span>
+											</div>
+										</div>
+										<div class="tabs-adres__body">
+											<ul class="tabs-adres__list">
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">ул. Ленина, 48</a>
+												</li>
+											</ul>
+											<div class="tabs-adres__work">
+												Режим работы
+												<span>Новоазовск (“Каждый день с 9.00 до 17.45”)</span>
+											</div>
+										</div>
+										<div class="tabs-adres__body">
+											<ul class="tabs-adres__list">
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">ул. Горького, 69б</a>
+												</li>
+											</ul>
+											<div class="tabs-adres__work">
+												Режим работы
+												<span>Комсомольское (“Каждый день с 9.00 до 17.45”)</span>
+											</div>
+										</div>
+										<div class="tabs-adres__body">
+											<ul class="tabs-adres__list">
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">ул. Октябрьская, 34б</a>
+												</li>
+											</ul>
+											<div class="tabs-adres__work">
+												Режим работы
+												<span>Харцызск (“Каждый день с 9.00 до 17.45”)</span>
+											</div>
+										</div>
+										<div class="tabs-adres__body">
+											<ul class="tabs-adres__list">
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">ул. Киевская, 1</a>
+												</li>
+											</ul>
+											<div class="tabs-adres__work">
+												Режим работы
+												<span>Волноваха (“Каждый день с 9.00 до 17.45”)</span>
+											</div>
+										</div>
+										<div class="tabs-adres__body">
+											<ul class="tabs-adres__list">
+												<li>
+													<a href="#" class="tabs-adres__link tabs-adres__link--icon-location">ул. Центральная, 29</a>
+												</li>
+											</ul>
+											<div class="tabs-adres__work">
+												Режим работы
+												<span>Докучаевск (“Каждый день с 9.00 до 17.45”)</span>
+											</div>
+										</div>
 									</div>
 								</div>
 								<div class="adres__tip">
-									<div class="adres__item-tip adres__item-tip--icon-marker">
-										<span>Красный маркер - нет бесплатного Озона</span>
-									</div>
-									<div class="adres__item-tip adres__item-tip--icon-marker">
-										<span>Синий маркер - бесплатный Озона</span>
-									</div>
+									<span class="--icon-marker">Красный маркер - нет бесплатного Озона</span>
+									<span class="--icon-marker">Синий маркер - бесплатный Озона</span>
 								</div>
 							</div>
-							<div data-fls-map="" class="adres__map map">
-								<div data-fls-map-marker="" class="map__marker" data-fls-map-lat="64.1472781774602" data-fls-map-lng="-21.942946038893755" data-fls-map-title="Title 1"></div>
-								<div data-fls-map-body="" class="map__body" data-fls-map-lat="64.1472781774602" data-fls-map-lng="-21.942946038893755"></div>
+							<div class="adres__map">
+								<iframe src="https://yandex.com/map-widget/v1/?ll=-21.819363%2C64.126301&mode=poi&poi%5Bpoint%5D=-21.939354%2C64.147112&poi%5Buri%5D=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoyMjI5NzI3NjkxEivDjXNsYW5kLCBIw7ZmdcOwYm9yZ2Fyc3bDpsOwacOwLCBSZXlramF2w61rIgoNhIOvwRVTS4BC&z=10.13" frameborder="1" allowfullscreen></iframe>
 							</div>
 						</div>
 					</div>
