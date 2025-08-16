@@ -124,3 +124,26 @@ body::after {
   padding: 0.5rem;
   display: flex;
 }
+@media (max-width: 29.99875em){
+  .input {
+    padding: 0.625rem 0.75rem;
+  }
+  textarea.input {
+    padding: 0.625rem 0.75rem;
+  }
+}
+@media (max-width: 20em){
+  .input {
+    font-size: 0.875rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 81.875em){
+  .input {
+    font-size: clamp( 0.875rem , 0.83459595959375rem  +  0.202020202vw , 1rem );
+  }
+}
+@media (min-width: 81.875em){
+  .input {
+    font-size: 1rem;
+  }
+}
