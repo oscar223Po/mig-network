@@ -54,6 +54,9 @@
   align-items: center;
   transition: background 0.3s;
 }
+.aside__link::before {
+  font-weight: 700;
+}
 .aside__link--active {
   background: #fff;
   pointer-events: none;
@@ -66,6 +69,9 @@
   border-radius: 0.625rem;
   align-items: center;
   transition: background 0.3s;
+}
+.aside__button::before {
+  font-weight: 700;
 }
 .news-aside {
   padding: 1.5rem;
