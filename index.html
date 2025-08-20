@@ -10,14 +10,17 @@
 		<link rel="preload" href="./assets/fonts/Gotham-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/shortcut.svg">
 		<title>Миг (сеть пунктов выдачи)</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1755367762913"></script>
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1755685317698"></script>
 		<link rel="modulepreload" crossorigin="" href="./js/app.min.js">
 		<link rel="modulepreload" crossorigin="" href="./js/dynamic.min.js">
 		<link rel="modulepreload" crossorigin="" href="./js/tabs.min.js">
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755367762913">
-		<link rel="stylesheet" crossorigin="" href="./css/tabs.min.css?v=1755367762913">
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1755367762913">
-		<link rel="stylesheet" crossorigin="" href="./css/main.min.css?v=1755367762913">
+		<link rel="modulepreload" crossorigin="" href="./js/checkbox.min.js">
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755685317698">
+		<link rel="stylesheet" crossorigin="" href="./css/tabs.min.css?v=1755685317698">
+		<link rel="stylesheet" crossorigin="" href="./css/checkbox.min.css?v=1755685317698">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1755685317698">
+		<link rel="stylesheet" crossorigin="" href="./css/input.min.css?v=1755685317698">
+		<link rel="stylesheet" crossorigin="" href="./css/main.min.css?v=1755685317698">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -65,7 +68,7 @@
 								</li>
 							</ul>
 							<span class="header__span"></span>
-							<a href="#" data-fls-button="" class="header__button button button--min button--icon-profile">
+							<a href="#" data-fls-button="" data-fls-authcontent="" class="header__button button button--min button--icon-profile">
 								<span>Личный кабинет</span>
 							</a>
 							<button type="button" data-fls-menu="" class="icon-menu">
@@ -669,6 +672,113 @@
 					</div>
 				</div>
 			</footer>
+			<div data-fls-auth="" class="auth">
+				<div class="auth__wrapper">
+					<div class="auth__body">
+						<button type="button" data-fls-authcontent="" class="auth__close">
+							<svg width="14" height="14" viewbox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12.25 1.75L1.75 12.25M12.25 12.25L1.75 1.75" stroke="#212D3F" stroke-width="2" stroke-linecap="round"></path>
+							</svg>
+						</button>
+						<div class="auth__content">
+							<div data-fls-tabs="" class="auth__tabs tabs-auth">
+								<nav data-fls-tabs-titles="" class="tabs-auth__navigation">
+									<button type="button" class="tabs-auth__title --tab-active">Войти в аккаунт</button>
+									<button type="button" class="tabs-auth__title">Регистрация</button>
+								</nav>
+								<div data-fls-tabs-body="" class="tabs-auth__content">
+									<div class="tabs-auth__body body-auth">
+										<div class="body-auth__text">
+											<p>
+												Если у вас еще нет аккаунта, перейдите на вкладку Регистрация и зарегистрируйтесь в один клик
+											</p>
+										</div>
+										<form action="#" method="#" class="body-auth__form">
+											<div class="body-auth__labels">
+												<div class="body-auth__label body-auth__label--label">
+													<span>Номер телефона</span>
+													<input data-fls-input="" data-fls-input-mask="+7 (999) 999 - 99 - 99" autocomplete="off" type="tel" name="form[]" data-error="Помилка" placeholder="+7 (___) ___ - __ - __" class="input">
+												</div>
+												<div class="body-auth__label body-auth__label--label">
+													<span>Пароль</span>
+													<input data-fls-input="" autocomplete="off" type="password" name="form[]" data-error="Помилка" placeholder="Введите пароль" class="input">
+												</div>
+											</div>
+											<button type="submit" class="body-auth__button button button--fw">Войти</button>
+										</form>
+									</div>
+									<div class="tabs-auth__body body-auth">
+										<div class="body-auth__text">
+											<p>Пароль от аккаунта поступит вам на указанную почту</p>
+										</div>
+										<form action="#" method="#" class="body-auth__form">
+											<div class="body-auth__labels">
+												<div class="body-auth__label body-auth__label--label">
+													<span>ФИО</span>
+													<input data-fls-input="" autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Введите ваше ФИО" class="input">
+												</div>
+												<div class="body-auth__label body-auth__label--label">
+													<span>Пароль</span>
+													<input data-fls-input="" autocomplete="off" type="password" name="form[]" data-error="Помилка" placeholder="Введите пароль" class="input">
+												</div>
+												<div class="body-auth__label body-auth__label--label">
+													<span>Повторите пароль</span>
+													<input data-fls-input="" autocomplete="off" type="password" name="form[]" data-error="Помилка" placeholder="Повторите пароль" class="input">
+												</div>
+												<div class="body-auth__label body-auth__label--label">
+													<span>Возраст</span>
+													<input data-fls-input="" data-fls-input-mask="Возраст: 99" autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Введите ваш возраст" class="input">
+												</div>
+												<div class="body-auth__selects">
+													<div class="body-auth__select">
+														<div class="body-auth__span-select">Населенный пункт</div>
+														<select name="form[]" data-fls-select="" data-fls-select-modif="auth">
+															<option value="1" selected>Пункт №1</option>
+															<option value="2">Пункт №2</option>
+															<option value="3">Пункт №3</option>
+															<option value="4">Пункт №4</option>
+														</select>
+													</div>
+													<div class="body-auth__select">
+														<div class="body-auth__span-select">Адрес ПВЗ в ДНР</div>
+														<select name="form[]" data-fls-select="" data-fls-select-modif="auth">
+															<option value="1" selected>Пункт №1</option>
+															<option value="2">Пункт №2</option>
+															<option value="3">Пункт №3</option>
+															<option value="4">Пункт №4</option>
+														</select>
+													</div>
+												</div>
+												<label data-fls-checkbox="" class="body-auth__checkbox checkbox">
+													<input data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<span class="checkbox__text">
+														<p>
+															Согласен на обработку
+															<a href="#">персональных данных</a>
+														</p>
+													</span>
+												</label>
+											</div>
+											<button type="submit" class="body-auth__button button button--fw">Зарегистрироваться</button>
+										</form>
+									</div>
+								</div>
+							</div>
+							<ul data-fls-social="" class="auth__social social">
+								<li class="social__item">
+									<a data-fls-border="" href="https://vk.com/pvz_dnr_zo" target="_blank" class="social__link social__link--l social__link--icon-s-vk"></a>
+								</li>
+								<li class="social__item">
+									<a data-fls-border="" href="#" target="_blank" class="social__link social__link--l social__link--icon-s-wh"></a>
+								</li>
+								<li class="social__item">
+									<a data-fls-border="" href="https://t.me/mig_delivery_bot" target="_blank" class="social__link social__link--l social__link--icon-s-tg"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
