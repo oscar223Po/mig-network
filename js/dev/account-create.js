@@ -1,9 +1,11 @@
 import "./app.min.js";
-import "./checkbox.min.js";
+import "./select.min.js";
 import "./base.min.js";
 import "./popup.min.js";
 import "./dynamic.min.js";
 /* empty css          */
+/* empty css             */
+/* empty css         */
 let currentStep = 1;
 const totalSteps = 3;
 const steps = document.querySelectorAll(".head-steps__step");

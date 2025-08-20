@@ -10,18 +10,20 @@
 		<link rel="preload" href="./assets/fonts/Gotham-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/shortcut.svg">
 		<title>Миг (личный кабинет)</title>
-		<script type="module" crossorigin="" src="./js/account-create.min.js?v=1755685317690"></script>
+		<script type="module" crossorigin="" src="./js/account-create.min.js?v=1755697583743"></script>
 		<link rel="modulepreload" crossorigin="" href="./js/app.min.js">
 		<link rel="modulepreload" crossorigin="" href="./js/dynamic.min.js">
-		<link rel="modulepreload" crossorigin="" href="./js/checkbox.min.js">
+		<link rel="modulepreload" crossorigin="" href="./js/select.min.js">
 		<link rel="modulepreload" crossorigin="" href="./js/base.min.js">
 		<link rel="modulepreload" crossorigin="" href="./js/popup.min.js">
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755685317690">
-		<link rel="stylesheet" crossorigin="" href="./css/checkbox.min.css?v=1755685317690">
-		<link rel="stylesheet" crossorigin="" href="./css/base.min.css?v=1755685317690">
-		<link rel="stylesheet" crossorigin="" href="./css/popup.min.css?v=1755685317690">
-		<link rel="stylesheet" crossorigin="" href="./css/account-create.min.css?v=1755685317690">
-		<link rel="stylesheet" crossorigin="" href="./css/input.min.css?v=1755685317690">
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755697583743">
+		<link rel="stylesheet" crossorigin="" href="./css/select.min.css?v=1755697583743">
+		<link rel="stylesheet" crossorigin="" href="./css/base.min.css?v=1755697583743">
+		<link rel="stylesheet" crossorigin="" href="./css/popup.min.css?v=1755697583743">
+		<link rel="stylesheet" crossorigin="" href="./css/account-create.min.css?v=1755697583743">
+		<link rel="stylesheet" crossorigin="" href="./css/input.min.css?v=1755697583743">
+		<link rel="stylesheet" crossorigin="" href="./css/checkbox.min.css?v=1755697583743">
+		<link rel="stylesheet" crossorigin="" href="./css/unit.min.css?v=1755697583743">
 	</head>
 	<body body-aside="">
 		<div class="wrapper">
@@ -47,6 +49,9 @@
 								</li>
 								<li class="menu__item">
 									<a href="account-choose.html" class="aside__link">Помощь в выборе ПВЗ</a>
+								</li>
+								<li class="menu__item">
+									<a href="account-loyalty.html" class="aside__link">Программа лояльности</a>
 								</li>
 								<div class="aside__mb-link"></div>
 							</ul>
@@ -94,7 +99,7 @@
 							</div>
 							<div class="steps__content content-steps">
 								<div class="content-steps__body active" id="content1">
-									<div class="content-steps__block">
+									<div class="content-steps__block --unit">
 										<h3 class="content-steps__title content-steps__title--title-18">ПВЗ заказа</h3>
 										<ul class="content-steps__choose">
 											<li>
@@ -116,7 +121,7 @@
 									</div>
 								</div>
 								<div class="content-steps__body" id="content2">
-									<div class="content-steps__block">
+									<div class="content-steps__block --unit">
 										<h3 class="content-steps__title content-steps__title--title-18">Данные о получателе</h3>
 										<div class="content-steps__labels">
 											<div class="content-steps__label content-steps__label--label">
@@ -129,7 +134,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="content-steps__block">
+									<div class="content-steps__block --unit">
 										<h3 class="content-steps__title content-steps__title--title-18">Данные о заказе</h3>
 										<div class="content-steps__labels">
 											<div class="content-steps__label content-steps__label--label">
@@ -146,7 +151,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="content-steps__block">
+									<div class="content-steps__block --unit">
 										<h3 class="content-steps__title content-steps__title--title-18">Комментарии к заказу</h3>
 										<div class="content-steps__labels">
 											<div class="content-steps__label content-steps__label--label">
@@ -161,25 +166,25 @@
 									</div>
 								</div>
 								<div class="content-steps__body" id="content3">
-									<div class="content-steps__block">
-										<h3 class="content-steps__title content-steps__title--title-18">ПВЗ WB в ДНР</h3>
-										<div class="content-steps__select">
-											<span class="content-steps__span-select">Адрес доставки при оформлении заказа на WB</span>
-											<div class="content-steps__content-select">
+									<div data-fls-unit="" class="content-steps__unit unit">
+										<h3 class="unit__title unit__title--title-18">ПВЗ WB в ДНР</h3>
+										<div class="unit__content">
+											<span class="unit__span">Адрес доставки при оформлении заказа на WB</span>
+											<div class="unit__select">
 												<select name="form[]" data-fls-select="" data-fls-select-modif="form">
 													<option value="1" selected>г. Донецк, пр-т Ленинский 26</option>
 													<option value="2">г. Мариуполь, пр-т Ленинский 26</option>
 													<option value="3">г. Макеевка, пр-т Ленинский 26</option>
 													<option value="4">г. Новоазовск, пр-т Ленинский 26</option>
 												</select>
-												<a href="#" class="content-steps__button-select button button--black button--fw">На карте</a>
+												<a href="#" class="unit__button button button--black button--fw">На карте</a>
 											</div>
 										</div>
 									</div>
-									<div class="content-steps__block">
-										<h3 class="content-steps__title content-steps__title--title-18 content-steps__title--icon-quest">ПВЗ в Ростове</h3>
-										<div class="content-steps__noth">Нужный ПВЗ подставляется автоматически</div>
-										<div class="content-steps__label content-steps__label--label">
+									<div data-fls-unit="" class="content-steps__unit unit">
+										<h3 class="unit__title unit__title--title-18 unit__title--icon-quest">ПВЗ WB в ДНР</h3>
+										<div class="unit__alert">Нужный ПВЗ подставляется автоматически</div>
+										<div class="unit__label unit__label--label">
 											<span>Адрес доставки при оформлении заказа на WB</span>
 											<input data-fls-input="" autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="г. Ростов-на-Дону, пр-т Сельмаш 94" class="input">
 										</div>
