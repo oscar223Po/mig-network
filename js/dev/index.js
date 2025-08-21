@@ -4582,7 +4582,7 @@ function menuInit() {
     }
   });
 }
-document.querySelector("[data-fls-menu]") && window.addEventListener("load", menuInit);
+document.querySelector("[data-fls-menu]") ? window.addEventListener("load", menuInit) : null;
 function headerScroll() {
   const header = document.querySelector("[data-fls-header-scroll]");
   const headerShow = header.hasAttribute("data-fls-header-scroll-show");
@@ -4636,7 +4636,7 @@ function authInit() {
     }
   });
 }
-document.querySelector("[data-fls-authcontent]") && window.addEventListener("load", authInit);
+document.querySelector("[data-fls-authcontent]") ? window.addEventListener("load", authInit) : null;
 var lottie$2 = { exports: {} };
 var lottie$1 = lottie$2.exports;
 var hasRequiredLottie;
