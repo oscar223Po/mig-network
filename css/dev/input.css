@@ -33,6 +33,38 @@ textarea.input {
   min-height: 5.625rem;
   padding: 0.8125rem 1rem;
 }
+.file {
+  width: 100%;
+  cursor: pointer;
+  padding: 1.03125rem;
+  align-items: center;
+  border-radius: 0.625rem;
+  display: inline-flex;
+  justify-content: center;
+  background: #f8f8f8;
+  transition: background 0.3s;
+  border: 0.0625rem dashed #e9e9e9;
+}
+.file input[type=file] {
+  display: none;
+}
+.file__label {
+  gap: 0.625rem;
+  display: flex;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  font-weight: 500;
+  align-items: center;
+}
+.file__label i {
+  font-style: normal;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+.file__label::before {
+  rotate: -90deg;
+  font-weight: 700;
+}
 @media (max-width: 29.99875em){
   .input {
     padding: 0 0.75rem;
@@ -54,5 +86,13 @@ textarea.input {
 @media (min-width: 81.875em){
   .input {
     font-size: 1rem;
+  }
+}
+@media (any-hover: hover){
+  .file:hover {
+    background: #f4f4f4;
+  }
+  .file:hover .file__label span {
+    text-decoration: none;
   }
 }

@@ -35,9 +35,6 @@
 .unit__select {
   display: flex;
 }
-.unit__button {
-  min-height: 100%;
-}
 @media (max-width: 47.99875em){
   .unit__alert {
     padding: 0.5rem 0.75rem;
@@ -47,9 +44,6 @@
   .unit__select {
     width: 100%;
     flex-direction: column;
-  }
-  .unit__button {
-    max-width: 100%;
   }
 }
 @media (max-width: 20em){

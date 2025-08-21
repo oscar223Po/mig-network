@@ -47,7 +47,6 @@
   overflow: hidden;
   border-radius: 0.625rem;
   border: 0.0625rem solid #e9e9e9;
-  box-shadow: rgba(17, 17, 26, 0.03) 0rem 0.0625rem 0rem, rgba(17, 17, 26, 0.03) 0rem 0rem 0.5rem;
   transition: background 0.3s, color 0.3s;
 }
 .spollers__item[open] {
@@ -452,19 +451,7 @@ body::after {
 }
 .auth__close {
   top: 1.625rem;
-  width: 2.625rem;
-  height: 2.625rem;
-  display: flex;
   position: absolute;
-  border-radius: 0.5rem;
-  background: #e9eaec;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.3s;
-  border: 0.0625rem solid #e9e9e9;
-}
-.auth__close svg path {
-  transition: stroke 0.3s;
 }
 .auth__social {
   justify-content: center;
@@ -603,7 +590,7 @@ body::after {
 .item-step {
   position: relative;
   border-radius: 0.625rem;
-  padding: 2.25rem 1.25rem 1.25rem 1.25rem;
+  padding: 2.625rem 1.25rem 1.5625rem 1.25rem;
   border: 0.125rem solid #e9e9e9;
 }
 .item-step--mt {
@@ -758,6 +745,7 @@ body::after {
 }
 .adres__body {
   display: grid;
+  grid-template-columns: 26.25rem 1fr;
 }
 .adres__aside {
   display: grid;
@@ -854,14 +842,17 @@ body::after {
 }
 @media (max-width: 61.99875em){
   .menu__body {
-    position: fixed;
-    width: 100%;
-    height: 100svh;
-    left: -100%;
     top: 0;
+    width: 100%;
+    left: -100%;
+    display: grid;
+    row-gap: 1.875rem;
+    height: 100svh;
     overflow: auto;
+    position: fixed;
     transition: left 0.3s;
-    padding: 7.5rem 0.9375rem 1.875rem 0.9375rem;
+    padding: 6.875rem 0.9375rem 1.875rem 0.9375rem;
+    grid-template-rows: 1fr auto;
   }
   .menu__body::after {
     background: rgba(225, 225, 225, 0.3);
@@ -910,17 +901,17 @@ body::after {
     position: relative;
   }
   .menu__list li:last-child::before {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
   .menu__link {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
   .icon-menu {
-    display: block;
-    position: relative;
-    width: 1.875rem;
-    height: 1.125rem;
     z-index: 5;
+    height: 1.125rem;
+    display: block;
+    min-width: 1.875rem;
+    position: relative;
   }
   .icon-menu span, .icon-menu::before, .icon-menu::after {
     content: "";
@@ -957,6 +948,9 @@ body::after {
   .body-auth__selects {
     flex-direction: column;
   }
+  .adres__body {
+    grid-template-columns: 20rem 1fr;
+  }
 }
 @media (max-width: 47.99875em){
   .spollers__title {
@@ -970,13 +964,6 @@ body::after {
   }
   .spollers__body {
     padding: 0rem 1.125rem 0.625rem 1.125rem;
-  }
-  .header__button {
-    font-size: 1.125rem;
-    padding: 0.625rem !important;
-  }
-  .header__button span {
-    display: none;
   }
   .footer__main {
     text-align: center;
@@ -998,8 +985,6 @@ body::after {
   }
   .auth__close {
     top: 0.8125rem;
-    width: 2.1875rem;
-    height: 2.1875rem;
   }
   .show__main {
     order: 2;
@@ -1027,6 +1012,9 @@ body::after {
   }
   .garant__body {
     padding: 1.875rem;
+  }
+  .adres__body {
+    grid-template-columns: auto;
   }
   .adres__map iframe {
     aspect-ratio: 16/9;
@@ -1502,9 +1490,6 @@ body::after {
   .ozon__body {
     grid-template-columns: 50.46875% 1fr;
   }
-  .adres__body {
-    grid-template-columns: 22.5rem 1fr;
-  }
   .adres__map {
     min-height: 36.75rem;
   }
@@ -1561,6 +1546,9 @@ body::after {
   }
   .step__container {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .step__main {
+    gap: 5.625rem;
   }
   .step__mobile-pip {
     display: none;
@@ -1800,8 +1788,11 @@ body::after {
 }
 @media (any-hover: hover){
   .video__button:hover {
+    background: #fff;
     color: #212d3f;
-    background: #04fcf8;
+  }
+  .spollers__item:hover {
+    background: #f8f8f8;
   }
   .spollers__body p a:hover {
     text-decoration: underline;
@@ -1820,12 +1811,6 @@ body::after {
   }
   .social__link--d:hover {
     background: #04fcf8;
-  }
-  .auth__close:hover {
-    background: #212d3f;
-  }
-  .auth__close:hover svg path {
-    stroke: #fff;
   }
   .tabs-auth__title:hover {
     opacity: 0.8;

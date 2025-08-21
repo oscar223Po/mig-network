@@ -1,4 +1,4 @@
-import { c as bodyLockStatus, h as bodyLock, i as bodyUnlock } from "./dynamic.min.js";
+import { e as bodyLockStatus, c as bodyLock, b as bodyUnlock } from "./dynamic.min.js";
 class Popup {
   constructor(options) {
     let config = {

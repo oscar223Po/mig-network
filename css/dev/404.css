@@ -43,8 +43,16 @@
     margin-bottom: clamp( 1.25rem , 1.007575757575rem  +  1.2121212121vw , 2rem );
   }
 }
+@media (min-width: 29.99875em) and (max-width: 81.875em){
+  .error__button {
+    max-width: clamp( 17rem , 13.385779860725rem  +  12.0479024602vw , 23.25rem );
+  }
+}
 @media (min-width: 81.875em){
   .error__body > * {
     margin-bottom: 2rem;
+  }
+  .error__button {
+    max-width: 23.25rem;
   }
 }

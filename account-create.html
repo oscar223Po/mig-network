@@ -10,20 +10,19 @@
 		<link rel="preload" href="./assets/fonts/Gotham-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/shortcut.svg">
 		<title>Миг (личный кабинет)</title>
-		<script type="module" crossorigin="" src="./js/account-create.min.js?v=1755718221790"></script>
+		<script type="module" crossorigin="" src="./js/account-create.min.js?v=1755786526957"></script>
 		<link rel="modulepreload" crossorigin="" href="./js/app.min.js">
 		<link rel="modulepreload" crossorigin="" href="./js/dynamic.min.js">
 		<link rel="modulepreload" crossorigin="" href="./js/select.min.js">
 		<link rel="modulepreload" crossorigin="" href="./js/base.min.js">
-		<link rel="modulepreload" crossorigin="" href="./js/popup.min.js">
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755718221790">
-		<link rel="stylesheet" crossorigin="" href="./css/select.min.css?v=1755718221790">
-		<link rel="stylesheet" crossorigin="" href="./css/base.min.css?v=1755718221790">
-		<link rel="stylesheet" crossorigin="" href="./css/popup.min.css?v=1755718221790">
-		<link rel="stylesheet" crossorigin="" href="./css/account-create.min.css?v=1755718221790">
-		<link rel="stylesheet" crossorigin="" href="./css/input.min.css?v=1755718221790">
-		<link rel="stylesheet" crossorigin="" href="./css/checkbox.min.css?v=1755718221790">
-		<link rel="stylesheet" crossorigin="" href="./css/unit.min.css?v=1755718221790">
+		<link rel="modulepreload" crossorigin="" href="./js/input.min.js">
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755786526957">
+		<link rel="stylesheet" crossorigin="" href="./css/select.min.css?v=1755786526957">
+		<link rel="stylesheet" crossorigin="" href="./css/base.min.css?v=1755786526957">
+		<link rel="stylesheet" crossorigin="" href="./css/input.min.css?v=1755786526957">
+		<link rel="stylesheet" crossorigin="" href="./css/account-create.min.css?v=1755786526957">
+		<link rel="stylesheet" crossorigin="" href="./css/checkbox.min.css?v=1755786526957">
+		<link rel="stylesheet" crossorigin="" href="./css/unit.min.css?v=1755786526957">
 	</head>
 	<body body-aside="">
 		<div class="wrapper">
@@ -33,7 +32,7 @@
 						<source media="(max-width: 479.98px)" srcset="./assets/img/logo-min.svg">
 						<img src="./assets/img/logo-full-col.svg" alt="Logo">
 					</picture>
-					<a href="account-create.html" data-fls-button="" class="upper__button button button--fw button--black">Сделать заказ</a>
+					<a href="account-create.html" data-fls-button="" class="upper__button button button--black button--172 button--fw">Сделать заказ</a>
 				</div>
 			</header>
 			<main class="accaunt">
@@ -147,7 +146,12 @@
 											</div>
 											<div class="content-steps__label content-steps__label--label">
 												<span>Штрих код для получения</span>
-												<button data-fls-button="" type="submit" class="content-steps__button button button--gray button--fw">Загрузить файл</button>
+												<label class="content-steps__file file">
+													<div class="file__label file__label--icon-log-out">
+														<i>Загрузить файл</i>
+													</div>
+													<input data-fls-input="" autocomplete="off" type="file" id="fileInput">
+												</label>
 											</div>
 										</div>
 									</div>
@@ -160,7 +164,12 @@
 											</div>
 											<div class="content-steps__label content-steps__label--label">
 												<span>Штрих код для получения</span>
-												<button data-fls-button="" type="submit" class="content-steps__button button button--gray button--fw">Загрузить файл</button>
+												<label class="content-steps__file file">
+													<div class="file__label file__label--icon-log-out">
+														<i>Загрузить файл</i>
+													</div>
+													<input data-fls-input="" autocomplete="off" type="file" id="fileInput">
+												</label>
 											</div>
 										</div>
 									</div>
@@ -177,7 +186,7 @@
 													<option value="3">г. Макеевка, пр-т Ленинский 26</option>
 													<option value="4">г. Новоазовск, пр-т Ленинский 26</option>
 												</select>
-												<a href="#" class="unit__button button button--black button--fw">На карте</a>
+												<a href="#" data-fls-button="" class="unit__button button button--black button--137 button--fw">На карте</a>
 											</div>
 										</div>
 									</div>
@@ -198,30 +207,13 @@
 								</label>
 								<div class="actions-steps__buttons">
 									<button class="actions-steps__back" id="prevBtn" style="display:none;">Назад</button>
-									<button class="actions-steps__button button button--black button--fw" id="nextBtn">Далее</button>
+									<button data-fls-button="" class="actions-steps__button button button--black button--172 button--fw" id="nextBtn">Далее</button>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</main>
-		</div>
-		<div data-fls-popup="punct" aria-hidden="true" class="popup">
-			<div data-fls-popup-wrapper="" class="popup__wrapper">
-				<div data-fls-popup-body="" class="popup__body punct">
-					<div class="punct__content">
-						<div class="punct__label">
-							Для получения вашего заказа в ПВЗ по адресу:
-							<span>Г. Донецк, р-т Ленинский, 26</span>
-						</div>
-						<div class="punct__info">При оформлении заказа на WB необходимо указать адрес доставки</div>
-					</div>
-					<div class="punct__copy">
-						<input data-fls-input="" autocomplete="off" type="text" name="form[]" value="г. Ростов-на-Дону, пр-т Шолохова 211/1с1" data-error="Помилка" placeholder="" class="punct__input">
-						<button data-fls-button="" type="submit" class="punct__button punct__button--icon-copy"></button>
-					</div>
-				</div>
-			</div>
 		</div>
 	</body>
 </html>

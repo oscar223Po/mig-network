@@ -1,8 +1,8 @@
 import "./app.min.js";
 import "./tabs.min.js";
 import "./select.min.js";
-import { d as dataMediaQueries, s as slideToggle, a as slideUp, b as bodyLockToggle, c as bodyLockStatus } from "./dynamic.min.js";
-/* empty css          */
+import { d as dataMediaQueries, s as slideToggle, a as slideUp, b as bodyUnlock, c as bodyLock, e as bodyLockStatus } from "./dynamic.min.js";
+import "./input.min.js";
 import "./mask.min.js";
 /* empty css             */
 /* empty css         */
@@ -4564,15 +4564,25 @@ function initSliders() {
   }
 }
 document.querySelector("[data-fls-slider]") ? window.addEventListener("load", initSliders) : null;
-function menuInit$1() {
+function menuInit() {
   document.addEventListener("click", function(e) {
-    if (bodyLockStatus && e.target.closest("[data-fls-menu]")) {
-      bodyLockToggle();
-      document.documentElement.toggleAttribute("data-fls-menu-open");
+    const btn = e.target.closest("[data-fls-menu]");
+    if (bodyLockStatus && btn) {
+      const isOpen = document.documentElement.hasAttribute("data-fls-menu-open");
+      if (isOpen) {
+        document.documentElement.removeAttribute("data-fls-menu-open");
+        if (!document.documentElement.hasAttribute("data-fls-authcontent-open")) {
+          bodyUnlock();
+        }
+      } else {
+        document.documentElement.setAttribute("data-fls-menu-open", "");
+        bodyLock();
+        document.documentElement.removeAttribute("data-fls-authcontent-open");
+      }
     }
   });
 }
-document.querySelector("[data-fls-menu]") ? window.addEventListener("load", menuInit$1) : null;
+document.querySelector("[data-fls-menu]") && window.addEventListener("load", menuInit);
 function headerScroll() {
   const header = document.querySelector("[data-fls-header-scroll]");
   const headerShow = header.hasAttribute("data-fls-header-scroll-show");
@@ -4608,15 +4618,25 @@ document.querySelector("[data-fls-header-scroll]") ? window.addEventListener("lo
 function getDefaultExportFromCjs(x) {
   return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, "default") ? x["default"] : x;
 }
-function menuInit() {
+function authInit() {
   document.addEventListener("click", function(e) {
-    if (bodyLockStatus && e.target.closest("[data-fls-authcontent]")) {
-      bodyLockToggle();
-      document.documentElement.toggleAttribute("data-fls-authcontent-open");
+    const btn = e.target.closest("[data-fls-authcontent]");
+    if (bodyLockStatus && btn) {
+      const isOpen = document.documentElement.hasAttribute("data-fls-authcontent-open");
+      if (isOpen) {
+        document.documentElement.removeAttribute("data-fls-authcontent-open");
+        if (!document.documentElement.hasAttribute("data-fls-menu-open")) {
+          bodyUnlock();
+        }
+      } else {
+        document.documentElement.setAttribute("data-fls-authcontent-open", "");
+        bodyLock();
+        document.documentElement.removeAttribute("data-fls-menu-open");
+      }
     }
   });
 }
-document.querySelector("[data-fls-authcontent]") ? window.addEventListener("load", menuInit) : null;
+document.querySelector("[data-fls-authcontent]") && window.addEventListener("load", authInit);
 var lottie$2 = { exports: {} };
 var lottie$1 = lottie$2.exports;
 var hasRequiredLottie;

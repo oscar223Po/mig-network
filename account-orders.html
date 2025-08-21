@@ -10,14 +10,15 @@
 		<link rel="preload" href="./assets/fonts/Gotham-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/shortcut.svg">
 		<title>Миг (личный кабинет)</title>
-		<script type="module" crossorigin="" src="./js/app.min.js?v=1755718221792"></script>
-		<script type="module" crossorigin="" src="./js/dynamic.min.js?v=1755718221792"></script>
-		<script type="module" crossorigin="" src="./js/tabs.min.js?v=1755718221792"></script>
-		<script type="module" crossorigin="" src="./js/base.min.js?v=1755718221792"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755718221792">
-		<link rel="stylesheet" crossorigin="" href="./css/tabs.min.css?v=1755718221792">
-		<link rel="stylesheet" crossorigin="" href="./css/base.min.css?v=1755718221792">
-		<link rel="stylesheet" crossorigin="" href="./css/account-orders.min.css?v=1755718221792">
+		<script type="module" crossorigin="" src="./js/account-orders.min.js?v=1755786526955"></script>
+		<link rel="modulepreload" crossorigin="" href="./js/app.min.js">
+		<link rel="modulepreload" crossorigin="" href="./js/dynamic.min.js">
+		<link rel="modulepreload" crossorigin="" href="./js/tabs.min.js">
+		<link rel="modulepreload" crossorigin="" href="./js/base.min.js">
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755786526955">
+		<link rel="stylesheet" crossorigin="" href="./css/tabs.min.css?v=1755786526955">
+		<link rel="stylesheet" crossorigin="" href="./css/base.min.css?v=1755786526955">
+		<link rel="stylesheet" crossorigin="" href="./css/account-orders.min.css?v=1755786526955">
 	</head>
 	<body body-aside="">
 		<div class="wrapper">
@@ -27,7 +28,7 @@
 						<source media="(max-width: 479.98px)" srcset="./assets/img/logo-min.svg">
 						<img src="./assets/img/logo-full-col.svg" alt="Logo">
 					</picture>
-					<a href="account-create.html" data-fls-button="" class="upper__button button button--fw button--black">Сделать заказ</a>
+					<a href="account-create.html" data-fls-button="" class="upper__button button button--black button--172 button--fw">Сделать заказ</a>
 				</div>
 			</header>
 			<main class="accaunt">
@@ -112,8 +113,8 @@
 											<span>1200₽</span>
 										</div>
 										<div class="item__actions">
-											<button type="button" class="item__tip item__tip--icon-quest"></button>
-											<div class="item__status">Отменен</div>
+											<button data-fls-tippy-content="Причина: Неверный код или товар не приехал" type="button" class="item__tip item__tip--icon-quest"></button>
+											<div class="item__status item__status--cancel">Отменен</div>
 										</div>
 									</div>
 									<div data-fls-item="" class="body-orders__item item">
@@ -145,8 +146,8 @@
 											<span>0.00₽</span>
 										</div>
 										<div class="item__actions">
-											<button type="button" class="item__tip item__tip--icon-quest"></button>
-											<div class="item__status">Отменен</div>
+											<button data-fls-tippy-content="Заказ Вас ожидает!" type="button" class="item__tip item__tip--icon-quest"></button>
+											<div class="item__status item__status--aproved">Доставлен</div>
 										</div>
 									</div>
 									<div data-fls-item="" class="body-orders__item item">
@@ -178,8 +179,8 @@
 											<span>0.00₽</span>
 										</div>
 										<div class="item__actions">
-											<button type="button" class="item__tip item__tip--icon-quest"></button>
-											<div class="item__status">Отменен</div>
+											<button data-fls-tippy-content="Причина: Неверный код или товар не приехал" type="button" class="item__tip item__tip--icon-quest"></button>
+											<div class="item__status item__status--cancel">Отменен</div>
 										</div>
 									</div>
 									<div data-fls-item="" class="body-orders__item item">
@@ -211,8 +212,8 @@
 											<span>1200₽</span>
 										</div>
 										<div class="item__actions">
-											<button type="button" class="item__tip item__tip--icon-quest"></button>
-											<div class="item__status">Отменен</div>
+											<button data-fls-tippy-content="Ваш заказ еще в пути" type="button" class="item__tip item__tip--icon-quest"></button>
+											<div class="item__status item__status--inway">В пути</div>
 										</div>
 									</div>
 								</div>
@@ -246,15 +247,81 @@
 											<span>1200₽</span>
 										</div>
 										<div class="item__actions">
-											<button type="button" class="item__tip item__tip--icon-quest"></button>
-											<div class="item__status">Отменен</div>
+											<button data-fls-tippy-content="Ваш заказ еще в пути" type="button" class="item__tip item__tip--icon-quest"></button>
+											<div class="item__status item__status--inway">В пути</div>
+										</div>
+									</div>
+									<div data-fls-item="" class="body-orders__item item">
+										<div class="item__main">
+											<div class="item__icon item__icon--icon-deliver"></div>
+											<div class="item__body">
+												<div class="item__head">
+													<div class="item__number">
+														Заказ
+														<span>№1234</span>
+													</div>
+													<div class="item__info">
+														<div class="item__date">
+															<span>24.08.2025</span>
+														</div>
+														<div class="item__time">
+															<span>13:24</span>
+														</div>
+													</div>
+												</div>
+												<div class="item__adres">
+													Пункт выдачи:
+													<span>Г. Донецк, пр-т Ленинский, 4</span>
+												</div>
+											</div>
+										</div>
+										<div class="item__cost">
+											Стоимость доставки:
+											<span>1200₽</span>
+										</div>
+										<div class="item__actions">
+											<button data-fls-tippy-content="Ваш заказ еще в пути" type="button" class="item__tip item__tip--icon-quest"></button>
+											<div class="item__status item__status--inway">В пути</div>
+										</div>
+									</div>
+									<div data-fls-item="" class="body-orders__item item">
+										<div class="item__main">
+											<div class="item__icon item__icon--icon-deliver"></div>
+											<div class="item__body">
+												<div class="item__head">
+													<div class="item__number">
+														Заказ
+														<span>№1234</span>
+													</div>
+													<div class="item__info">
+														<div class="item__date">
+															<span>24.08.2025</span>
+														</div>
+														<div class="item__time">
+															<span>13:24</span>
+														</div>
+													</div>
+												</div>
+												<div class="item__adres">
+													Пункт выдачи:
+													<span>Г. Донецк, пр-т Ленинский, 4</span>
+												</div>
+											</div>
+										</div>
+										<div class="item__cost">
+											Стоимость доставки:
+											<span>1200₽</span>
+										</div>
+										<div class="item__actions">
+											<button data-fls-tippy-content="Ваш заказ еще в пути" type="button" class="item__tip item__tip--icon-quest"></button>
+											<div class="item__status item__status--inway">В пути</div>
 										</div>
 									</div>
 								</div>
 								<div class="tabs-orders__body body-orders">
 									<div data-fls-item="" class="body-orders__item item">
 										<div class="item__main">
-											<div class="item__icon item__icon--icon-package"></div>
+											<div class="item__icon item__icon--icon-deliver"></div>
 											<div class="item__body">
 												<div class="item__head">
 													<div class="item__number">
@@ -278,16 +345,16 @@
 										</div>
 										<div class="item__cost">
 											Стоимость доставки:
-											<span>0.00₽</span>
+											<span>1200₽</span>
 										</div>
 										<div class="item__actions">
-											<button type="button" class="item__tip item__tip--icon-quest"></button>
-											<div class="item__status">Отменен</div>
+											<button data-fls-tippy-content="Причина: Неверный код или товар не приехал" type="button" class="item__tip item__tip--icon-quest"></button>
+											<div class="item__status item__status--cancel">Отменен</div>
 										</div>
 									</div>
 									<div data-fls-item="" class="body-orders__item item">
 										<div class="item__main">
-											<div class="item__icon item__icon--icon-package"></div>
+											<div class="item__icon item__icon--icon-deliver"></div>
 											<div class="item__body">
 												<div class="item__head">
 													<div class="item__number">
@@ -311,11 +378,110 @@
 										</div>
 										<div class="item__cost">
 											Стоимость доставки:
-											<span>0.00₽</span>
+											<span>1200₽</span>
 										</div>
 										<div class="item__actions">
-											<button type="button" class="item__tip item__tip--icon-quest"></button>
-											<div class="item__status">Отменен</div>
+											<button data-fls-tippy-content="Причина: Неверный код или товар не приехал" type="button" class="item__tip item__tip--icon-quest"></button>
+											<div class="item__status item__status--cancel">Отменен</div>
+										</div>
+									</div>
+									<div data-fls-item="" class="body-orders__item item">
+										<div class="item__main">
+											<div class="item__icon item__icon--icon-deliver"></div>
+											<div class="item__body">
+												<div class="item__head">
+													<div class="item__number">
+														Заказ
+														<span>№1234</span>
+													</div>
+													<div class="item__info">
+														<div class="item__date">
+															<span>24.08.2025</span>
+														</div>
+														<div class="item__time">
+															<span>13:24</span>
+														</div>
+													</div>
+												</div>
+												<div class="item__adres">
+													Пункт выдачи:
+													<span>Г. Донецк, пр-т Ленинский, 4</span>
+												</div>
+											</div>
+										</div>
+										<div class="item__cost">
+											Стоимость доставки:
+											<span>1200₽</span>
+										</div>
+										<div class="item__actions">
+											<button data-fls-tippy-content="Причина: Неверный код или товар не приехал" type="button" class="item__tip item__tip--icon-quest"></button>
+											<div class="item__status item__status--cancel">Отменен</div>
+										</div>
+									</div>
+									<div data-fls-item="" class="body-orders__item item">
+										<div class="item__main">
+											<div class="item__icon item__icon--icon-deliver"></div>
+											<div class="item__body">
+												<div class="item__head">
+													<div class="item__number">
+														Заказ
+														<span>№1234</span>
+													</div>
+													<div class="item__info">
+														<div class="item__date">
+															<span>24.08.2025</span>
+														</div>
+														<div class="item__time">
+															<span>13:24</span>
+														</div>
+													</div>
+												</div>
+												<div class="item__adres">
+													Пункт выдачи:
+													<span>Г. Донецк, пр-т Ленинский, 4</span>
+												</div>
+											</div>
+										</div>
+										<div class="item__cost">
+											Стоимость доставки:
+											<span>1200₽</span>
+										</div>
+										<div class="item__actions">
+											<button data-fls-tippy-content="Причина: Неверный код или товар не приехал" type="button" class="item__tip item__tip--icon-quest"></button>
+											<div class="item__status item__status--cancel">Отменен</div>
+										</div>
+									</div>
+									<div data-fls-item="" class="body-orders__item item">
+										<div class="item__main">
+											<div class="item__icon item__icon--icon-deliver"></div>
+											<div class="item__body">
+												<div class="item__head">
+													<div class="item__number">
+														Заказ
+														<span>№1234</span>
+													</div>
+													<div class="item__info">
+														<div class="item__date">
+															<span>24.08.2025</span>
+														</div>
+														<div class="item__time">
+															<span>13:24</span>
+														</div>
+													</div>
+												</div>
+												<div class="item__adres">
+													Пункт выдачи:
+													<span>Г. Донецк, пр-т Ленинский, 4</span>
+												</div>
+											</div>
+										</div>
+										<div class="item__cost">
+											Стоимость доставки:
+											<span>1200₽</span>
+										</div>
+										<div class="item__actions">
+											<button data-fls-tippy-content="Причина: Неверный код или товар не приехал" type="button" class="item__tip item__tip--icon-quest"></button>
+											<div class="item__status item__status--cancel">Отменен</div>
 										</div>
 									</div>
 								</div>

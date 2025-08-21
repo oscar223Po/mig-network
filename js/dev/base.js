@@ -1,4 +1,4 @@
-import { d as dataMediaQueries, a as slideUp, e as slideDown } from "./dynamic.min.js";
+import { d as dataMediaQueries, a as slideUp, f as slideDown } from "./dynamic.min.js";
 function showMore() {
   const showMoreBlocks = document.querySelectorAll("[data-fls-showmore]");
   let showMoreBlocksRegular;

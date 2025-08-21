@@ -1,9 +1,8 @@
 import "./app.min.js";
 import "./select.min.js";
 import "./base.min.js";
-import "./popup.min.js";
 import "./dynamic.min.js";
-/* empty css          */
+import "./input.min.js";
 /* empty css             */
 /* empty css         */
 let currentStep = 1;
