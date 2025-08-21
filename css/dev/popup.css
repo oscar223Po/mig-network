@@ -75,22 +75,6 @@ body::after {
   font-weight: 500;
   font-family: "Inter";
 }
-.punct__copy {
-  display: flex;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.625rem;
-  align-items: center;
-  border: 0.0625rem solid #e9e9e9;
-}
-.punct__input {
-  height: 100%;
-  outline: none;
-  padding: 0rem 0.5rem;
-}
-.punct__button {
-  padding: 0.5rem;
-  display: flex;
-}
 .code {
   text-align: center;
 }
@@ -98,22 +82,16 @@ body::after {
   justify-self: end;
   margin-bottom: 1.25rem;
 }
-.code__title {
-  gap: 0.75rem;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+.pick {
+  max-width: 85.625rem;
 }
-.code__title span {
-  display: flex;
-  font-weight: 400;
-  color: #80848a;
-  text-align: center;
+.pick__close {
+  justify-self: end;
+  margin-bottom: 1.25rem;
 }
-@media (max-width: 47.99875em){
-  .code__title {
-    gap: 0.5rem;
-  }
+.pick__head {
+  gap: 1.25rem;
+  display: grid;
 }
 @media (max-width: 20em){
   .code {
@@ -122,11 +100,11 @@ body::after {
   .code {
     padding-bottom: 1.25rem;
   }
-  .code__title {
+  .code__uphead {
     margin-bottom: 1.5625rem;
   }
-  .code__title span {
-    font-size: 0.875rem;
+  .pick__head {
+    margin-bottom: 1rem;
   }
 }
 @media (min-width: 20em) and (max-width: 81.875em){
@@ -136,11 +114,17 @@ body::after {
   .code {
     padding-bottom: clamp( 1.25rem , 0.44191919191875rem  +  4.0404040404vw , 3.75rem );
   }
-  .code__title {
+  .code__uphead {
     margin-bottom: clamp( 1.5625rem , 1.05744949495rem  +  2.5252525253vw , 3.125rem );
   }
-  .code__title span {
-    font-size: clamp( 0.875rem , 0.83459595959375rem  +  0.202020202vw , 1rem );
+  .pick__head {
+    margin-bottom: clamp( 1rem , 0.67676767676875rem  +  1.6161616162vw , 2rem );
+  }
+}
+@media (min-width: 47.99875em){
+  .pick__head {
+    gap: 0.625rem;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (min-width: 81.875em){
@@ -150,10 +134,10 @@ body::after {
   .code {
     padding-bottom: 3.75rem;
   }
-  .code__title {
+  .code__uphead {
     margin-bottom: 3.125rem;
   }
-  .code__title span {
-    font-size: 1rem;
+  .pick__head {
+    margin-bottom: 2rem;
   }
 }

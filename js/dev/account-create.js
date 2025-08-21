@@ -5,6 +5,7 @@ import "./dynamic.min.js";
 import "./input.min.js";
 /* empty css             */
 /* empty css         */
+import "./serve.min.js";
 let currentStep = 1;
 const totalSteps = 3;
 const steps = document.querySelectorAll(".head-steps__step");
@@ -61,11 +62,3 @@ cancelLink.addEventListener("click", (e) => {
   }
 });
 updateForm();
-const links = document.querySelectorAll(".content-steps__link");
-links.forEach((link) => {
-  link.addEventListener("click", function(e) {
-    e.preventDefault();
-    document.querySelector(".content-steps__link--active")?.classList.remove("content-steps__link--active");
-    this.classList.add("content-steps__link--active");
-  });
-});
