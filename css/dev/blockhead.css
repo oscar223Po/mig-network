@@ -75,13 +75,13 @@
     font-size: 2rem;
   }
   .blockhead__title--56 {
-    font-size: 1.75rem;
+    font-size: 2.125rem;
   }
   .blockhead__title--56 span::before {
     height: 0.1875rem;
   }
   .blockhead__title--48 {
-    font-size: 1.5rem;
+    font-size: 2.125rem;
   }
   .blockhead__text {
     font-size: 0.875rem;
@@ -104,13 +104,13 @@
     font-size: clamp( 2rem , 1.19191919191875rem  +  4.0404040404vw , 4.5rem );
   }
   .blockhead__title--56 {
-    font-size: clamp( 1.75rem , 1.18434343434375rem  +  2.8282828283vw , 3.5rem );
+    font-size: clamp( 2.125rem , 1.68055555555625rem  +  2.2222222222vw , 3.5rem );
   }
   .blockhead__title--56 span::before {
     height: clamp( 0.1875rem , 0.14709595959375rem  +  0.202020202vw , 0.3125rem );
   }
   .blockhead__title--48 {
-    font-size: clamp( 1.5rem , 1.01515151515rem  +  2.4242424242vw , 3rem );
+    font-size: clamp( 2.125rem , 1.84217171716875rem  +  1.4141414141vw , 3rem );
   }
   .blockhead__text {
     font-size: clamp( 0.875rem , 0.83459595959375rem  +  0.202020202vw , 1rem );

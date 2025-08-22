@@ -318,7 +318,7 @@ body[body-aside] {
 }
 @media (max-width: 20em){
   [class*="--title-56"] {
-    font-size: 1.75rem;
+    font-size: 2.125rem;
   }
   [class*="--title-26"] {
     font-size: 1.125rem;
@@ -347,7 +347,7 @@ body[body-aside] {
 }
 @media (min-width: 20em) and (max-width: 81.875em){
   [class*="--title-56"] {
-    font-size: clamp( 1.75rem , 1.18434343434375rem  +  2.8282828283vw , 3.5rem );
+    font-size: clamp( 2.125rem , 1.68055555555625rem  +  2.2222222222vw , 3.5rem );
   }
   [class*="--title-26"] {
     font-size: clamp( 1.125rem , 0.96338383838125rem  +  0.8080808081vw , 1.625rem );
