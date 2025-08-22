@@ -1,11 +1,11 @@
 import "./app.min.js";
 import "./mask.min.js";
 import "./base.min.js";
+import "./popup.min.js";
+import "./blockhead.min.js";
 import "./dynamic.min.js";
-import "./input.min.js";
 /* empty css             */
 /* empty css         */
-import "./serve.min.js";
 let currentStep = 1;
 const totalSteps = 3;
 let selectedChoice = 1;
