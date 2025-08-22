@@ -10,21 +10,21 @@
 		<link rel="preload" href="./assets/fonts/Gotham-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/shortcut.svg">
 		<title>Миг (личный кабинет)</title>
-		<script type="module" crossorigin="" src="./js/account-create.min.js?v=1755802992971"></script>
+		<script type="module" crossorigin="" src="./js/account-create.min.js?v=1755847700354"></script>
 		<link rel="modulepreload" crossorigin="" href="./js/app.min.js">
 		<link rel="modulepreload" crossorigin="" href="./js/dynamic.min.js">
-		<link rel="modulepreload" crossorigin="" href="./js/select.min.js">
+		<link rel="modulepreload" crossorigin="" href="./js/mask.min.js">
 		<link rel="modulepreload" crossorigin="" href="./js/base.min.js">
 		<link rel="modulepreload" crossorigin="" href="./js/input.min.js">
 		<link rel="modulepreload" crossorigin="" href="./js/serve.min.js">
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755802992971">
-		<link rel="stylesheet" crossorigin="" href="./css/select.min.css?v=1755802992971">
-		<link rel="stylesheet" crossorigin="" href="./css/base.min.css?v=1755802992971">
-		<link rel="stylesheet" crossorigin="" href="./css/input.min.css?v=1755802992971">
-		<link rel="stylesheet" crossorigin="" href="./css/serve.min.css?v=1755802992971">
-		<link rel="stylesheet" crossorigin="" href="./css/account-create.min.css?v=1755802992971">
-		<link rel="stylesheet" crossorigin="" href="./css/checkbox.min.css?v=1755802992971">
-		<link rel="stylesheet" crossorigin="" href="./css/unit.min.css?v=1755802992971">
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755847700354">
+		<link rel="stylesheet" crossorigin="" href="./css/mask.min.css?v=1755847700354">
+		<link rel="stylesheet" crossorigin="" href="./css/base.min.css?v=1755847700354">
+		<link rel="stylesheet" crossorigin="" href="./css/input.min.css?v=1755847700354">
+		<link rel="stylesheet" crossorigin="" href="./css/serve.min.css?v=1755847700354">
+		<link rel="stylesheet" crossorigin="" href="./css/account-create.min.css?v=1755847700354">
+		<link rel="stylesheet" crossorigin="" href="./css/checkbox.min.css?v=1755847700354">
+		<link rel="stylesheet" crossorigin="" href="./css/unit.min.css?v=1755847700354">
 	</head>
 	<body body-aside="">
 		<div class="wrapper">
@@ -99,39 +99,38 @@
 								</div>
 							</div>
 							<div class="steps__content content-steps">
-								<div class="content-steps__body active" id="content1">
-									<div class="content-steps__block --unit">
-										<h3 class="content-steps__title content-steps__title--title-18">ПВЗ заказа</h3>
-										<ul data-fls-serve="" class="ontent-steps__serve serve">
-											<li>
-												<a href="#" class="serve__link serve__link--active">
-													<img src="./assets/img/order/wildberries.svg" alt="Image">
-												</a>
-											</li>
-											<li>
-												<a href="#" class="serve__link">
-													<img src="./assets/img/order/yandex.svg" alt="Image">
-												</a>
-											</li>
-											<li>
-												<a href="#" class="serve__link">
-													<img src="./assets/img/order/ozon.svg" alt="Image">
-												</a>
-											</li>
-										</ul>
-									</div>
+								<div class="content-steps__body active --unit" id="content1">
+									<h3 class="content-steps__title content-steps__title--title-18">ПВЗ заказа</h3>
+									<ul data-fls-serve="" class="content-steps__serve serve">
+										<li>
+											<a href="#" class="serve__link serve__link--active" data-choice="1">
+												<img src="./assets/img/order/wildberries.svg" alt="WB">
+											</a>
+										</li>
+										<li>
+											<a href="#" class="serve__link" data-choice="2">
+												<img src="./assets/img/order/ozon.svg" alt="Ozon">
+											</a>
+										</li>
+										<li>
+											<a href="#" class="serve__link" data-choice="3">
+												<img src="./assets/img/order/yandex.svg" alt="Yandex">
+											</a>
+										</li>
+									</ul>
 								</div>
-								<div class="content-steps__body" id="content2">
+								<!-- Way Depends From First Step -->
+								<div class="content-steps__body" id="content2-1">
 									<div class="content-steps__block --unit">
-										<h3 class="content-steps__title content-steps__title--title-18">Данные о получателе</h3>
+										<h3 class="content-steps__title content-steps__title--title-18">Данные о получателе "WILDBERRIES"</h3>
 										<div class="content-steps__labels">
 											<div class="content-steps__label content-steps__label--label">
-												<span>Имя</span>
-												<input data-fls-input="" autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Введите имя" class="input">
+												<span>ФИО</span>
+												<input data-fls-input="" autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Введите ваше ФИО" class="input">
 											</div>
 											<div class="content-steps__label content-steps__label--label">
 												<span>Телефон</span>
-												<input data-fls-input="" autocomplete="off" type="tel" name="form[]" data-error="Помилка" placeholder="Введите имя" class="input">
+												<input data-fls-input="" data-fls-input-mask="8 (999) 999 - 99 - 99" autocomplete="off" type="tel" name="form[]" data-error="Помилка" placeholder="Введите телефон" class="input">
 											</div>
 										</div>
 									</div>
@@ -139,12 +138,12 @@
 										<h3 class="content-steps__title content-steps__title--title-18">Данные о заказе</h3>
 										<div class="content-steps__labels">
 											<div class="content-steps__label content-steps__label--label">
-												<span>Телефона личного кабинета Wildberries</span>
-												<input data-fls-input="" autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Введите имя" class="input">
+												<span>Код получения</span>
+												<input data-fls-input="" autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Введите код для получения заказа" class="input">
 											</div>
 											<div class="content-steps__label content-steps__label--label">
-												<span>Код получения</span>
-												<input data-fls-input="" autocomplete="off" type="tel" name="form[]" data-error="Помилка" placeholder="Введите имя" class="input">
+												<span>Номер заказа</span>
+												<input data-fls-input="" autocomplete="off" type="tel" name="form[]" data-error="Помилка" placeholder="Введите номер заказа" class="input">
 											</div>
 											<div class="content-steps__label content-steps__label--label">
 												<span>Штрих код для получения</span>
@@ -162,7 +161,7 @@
 										<div class="content-steps__labels">
 											<div class="content-steps__label content-steps__label--label">
 												<span>Комментарий к заказу</span>
-												<textarea data-fls-input="" autocomplete="off" name="form[]" placeholder="Введите комментарий" data-error="Помилка" class="input"></textarea>
+												<textarea data-fls-input="" autocomplete="off" name="form[]" placeholder="Оставьте комментарий, если нужно отменить какой либо товар, либо оставить пожелания к заказу:" data-error="Помилка" class="input"></textarea>
 											</div>
 											<div class="content-steps__label content-steps__label--label">
 												<span>Штрих код для получения</span>
@@ -176,6 +175,117 @@
 										</div>
 									</div>
 								</div>
+								<div class="content-steps__body" id="content2-2">
+									<div class="content-steps__block --unit">
+										<h3 class="content-steps__title content-steps__title--title-18">Данные о получателе "OZON"</h3>
+										<div class="content-steps__labels">
+											<div class="content-steps__label content-steps__label--label">
+												<span>ФИО</span>
+												<input data-fls-input="" autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Введите ваше ФИО" class="input">
+											</div>
+											<div class="content-steps__label content-steps__label--label">
+												<span>Телефон</span>
+												<input data-fls-input="" data-fls-input-mask="8 (999) 999 - 99 - 99" autocomplete="off" type="tel" name="form[]" data-error="Помилка" placeholder="Введите телефон" class="input">
+											</div>
+										</div>
+									</div>
+									<div class="content-steps__block --unit">
+										<h3 class="content-steps__title content-steps__title--title-18">Данные о заказе</h3>
+										<div class="content-steps__labels">
+											<div class="content-steps__label content-steps__label--label">
+												<span>Код получения</span>
+												<input data-fls-input="" autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Введите код для получения заказа" class="input">
+											</div>
+											<div class="content-steps__label content-steps__label--label">
+												<span>Номер заказа</span>
+												<input data-fls-input="" autocomplete="off" type="tel" name="form[]" data-error="Помилка" placeholder="Введите номер заказа" class="input">
+											</div>
+											<div class="content-steps__label content-steps__label--label">
+												<span>Штрих код для получения</span>
+												<label class="content-steps__file file">
+													<div class="file__label file__label--icon-log-out">
+														<i>Загрузить файл</i>
+													</div>
+													<input data-fls-input="" autocomplete="off" type="file" id="fileInput">
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="content-steps__block --unit">
+										<h3 class="content-steps__title content-steps__title--title-18">Комментарии к заказу</h3>
+										<div class="content-steps__labels">
+											<div class="content-steps__label content-steps__label--label">
+												<span>Комментарий к заказу</span>
+												<textarea data-fls-input="" autocomplete="off" name="form[]" placeholder="Оставьте комментарий, если нужно отменить какой либо товар, либо оставить пожелания к заказу:" data-error="Помилка" class="input"></textarea>
+											</div>
+											<div class="content-steps__label content-steps__label--label">
+												<span>Штрих код для получения</span>
+												<label class="content-steps__file file">
+													<div class="file__label file__label--icon-log-out">
+														<i>Загрузить файл</i>
+													</div>
+													<input data-fls-input="" autocomplete="off" type="file" id="fileInput">
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="content-steps__body" id="content2-3">
+									<div class="content-steps__block --unit">
+										<h3 class="content-steps__title content-steps__title--title-18">Данные о получателе "YANDEX"</h3>
+										<div class="content-steps__labels">
+											<div class="content-steps__label content-steps__label--label">
+												<span>ФИО</span>
+												<input data-fls-input="" autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Введите ваше ФИО" class="input">
+											</div>
+											<div class="content-steps__label content-steps__label--label">
+												<span>Телефон</span>
+												<input data-fls-input="" data-fls-input-mask="8 (999) 999 - 99 - 99" autocomplete="off" type="tel" name="form[]" data-error="Помилка" placeholder="Введите телефон" class="input">
+											</div>
+										</div>
+									</div>
+									<div class="content-steps__block --unit">
+										<h3 class="content-steps__title content-steps__title--title-18">Данные о заказе</h3>
+										<div class="content-steps__labels">
+											<div class="content-steps__label content-steps__label--label">
+												<span>Код получения</span>
+												<input data-fls-input="" autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Введите код для получения заказа" class="input">
+											</div>
+											<div class="content-steps__label content-steps__label--label">
+												<span>Номер заказа</span>
+												<input data-fls-input="" autocomplete="off" type="tel" name="form[]" data-error="Помилка" placeholder="Введите номер заказа" class="input">
+											</div>
+											<div class="content-steps__label content-steps__label--label">
+												<span>Штрих код для получения</span>
+												<label class="content-steps__file file">
+													<div class="file__label file__label--icon-log-out">
+														<i>Загрузить файл</i>
+													</div>
+													<input data-fls-input="" autocomplete="off" type="file" id="fileInput">
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="content-steps__block --unit">
+										<h3 class="content-steps__title content-steps__title--title-18">Комментарии к заказу</h3>
+										<div class="content-steps__labels">
+											<div class="content-steps__label content-steps__label--label">
+												<span>Комментарий к заказу</span>
+												<textarea data-fls-input="" autocomplete="off" name="form[]" placeholder="Оставьте комментарий, если нужно отменить какой либо товар, либо оставить пожелания к заказу:" data-error="Помилка" class="input"></textarea>
+											</div>
+											<div class="content-steps__label content-steps__label--label">
+												<span>Штрих код для получения</span>
+												<label class="content-steps__file file">
+													<div class="file__label file__label--icon-log-out">
+														<i>Загрузить файл</i>
+													</div>
+													<input data-fls-input="" autocomplete="off" type="file" id="fileInput">
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Way Depends From First Step -->
 								<div class="content-steps__body" id="content3">
 									<div data-fls-unit="" class="content-steps__unit unit">
 										<h3 class="unit__title unit__title--title-18">ПВЗ WB в ДНР</h3>

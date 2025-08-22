@@ -1,5 +1,5 @@
 import "./app.min.js";
-import "./select.min.js";
+import "./mask.min.js";
 import "./base.min.js";
 import "./dynamic.min.js";
 import "./input.min.js";
@@ -8,12 +8,22 @@ import "./input.min.js";
 import "./serve.min.js";
 let currentStep = 1;
 const totalSteps = 3;
+let selectedChoice = 1;
 const steps = document.querySelectorAll(".head-steps__step");
 const contents = document.querySelectorAll(".content-steps__body");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 const checkboxContainer = document.getElementById("checkboxContainer");
 const cancelLink = document.getElementById("cancelLink");
+const serveLinks = document.querySelectorAll(".serve__link");
+serveLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    serveLinks.forEach((l) => l.classList.remove("serve__link--active"));
+    link.classList.add("serve__link--active");
+    selectedChoice = link.dataset.choice;
+  });
+});
 function updateForm() {
   steps.forEach((step, index) => {
     step.classList.remove("active", "completed");
@@ -23,9 +33,14 @@ function updateForm() {
       step.classList.add("active");
     }
   });
-  contents.forEach((content, index) => {
-    content.classList.toggle("active", index + 1 === currentStep);
-  });
+  contents.forEach((content) => content.classList.remove("active"));
+  if (currentStep === 1) {
+    document.getElementById("content1").classList.add("active");
+  } else if (currentStep === 2) {
+    document.getElementById(`content2-${selectedChoice}`).classList.add("active");
+  } else if (currentStep === 3) {
+    document.getElementById("content3").classList.add("active");
+  }
   prevBtn.style.display = currentStep > 1 ? "inline-block" : "none";
   if (currentStep === totalSteps) {
     nextBtn.textContent = "Оформить заказ";

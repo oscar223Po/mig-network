@@ -307,9 +307,7 @@
 .footer__cop-list {
   display: flex;
   row-gap: 0.625rem;
-  flex-wrap: wrap;
-  text-align: center;
-  justify-content: center;
+  flex-direction: column;
 }
 .footer__cop-link {
   font-size: 0.875rem;
@@ -925,6 +923,9 @@ body::after {
     align-items: center;
     flex-direction: column;
   }
+  .footer__cop-list {
+    text-align: center;
+  }
   .auth__body {
     padding-top: 3.875rem;
     padding-bottom: 1.875rem;
@@ -1368,11 +1369,6 @@ body::after {
 @media (min-width: 47.99875em){
   .footer__social {
     align-self: self-start;
-  }
-  .footer__cop-list {
-    text-align: right;
-    align-self: center;
-    justify-content: flex-end;
   }
   .hero__main {
     grid-template-columns: repeat(2, 1fr);

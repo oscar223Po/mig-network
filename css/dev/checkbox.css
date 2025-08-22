@@ -16,6 +16,9 @@
 .checkbox__input:checked + .checkbox__text:after {
   transform: scale(1);
 }
+.checkbox__input:checked + .checkbox__text::before {
+  border: 0.0625rem solid #0564fc;
+}
 .checkbox__text {
   gap: 0.625rem;
   color: #000;
@@ -37,16 +40,16 @@
   border: 0.0625rem solid #a7a9ac;
 }
 .checkbox__text::after {
-  content: "";
+  font-weight: 700;
+  color: #0564fc;
+  font-family: "iconfont";
+  content: "\f118";
+  font-size: 0.75rem;
   transition: all 0.3s ease 0s;
   transform: scale(0);
-  width: 0.625rem;
-  height: 0.625rem;
-  border-radius: 0.125rem;
-  background-color: #212d3f;
   position: absolute;
-  left: 0.3125rem;
-  top: 0.3125rem;
+  left: 0.25rem;
+  top: 0.1875rem;
 }
 .checkbox__text p a {
   text-decoration: underline;

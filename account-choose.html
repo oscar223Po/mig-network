@@ -10,22 +10,22 @@
 		<link rel="preload" href="./assets/fonts/Gotham-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/shortcut.svg">
 		<title>Миг (личный кабинет)</title>
-		<script type="module" crossorigin="" src="./js/app.min.js?v=1755802992971"></script>
-		<script type="module" crossorigin="" src="./js/dynamic.min.js?v=1755802992971"></script>
-		<script type="module" crossorigin="" src="./js/tabs.min.js?v=1755802992971"></script>
-		<script type="module" crossorigin="" src="./js/base.min.js?v=1755802992971"></script>
-		<script type="module" crossorigin="" src="./js/popup.min.js?v=1755802992971"></script>
-		<script type="module" crossorigin="" src="./js/blockhead.min.js?v=1755802992971"></script>
-		<script type="module" crossorigin="" src="./js/input.min.js?v=1755802992971"></script>
-		<script type="module" crossorigin="" src="./js/serve.min.js?v=1755802992971"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755802992971">
-		<link rel="stylesheet" crossorigin="" href="./css/tabs.min.css?v=1755802992971">
-		<link rel="stylesheet" crossorigin="" href="./css/base.min.css?v=1755802992971">
-		<link rel="stylesheet" crossorigin="" href="./css/popup.min.css?v=1755802992971">
-		<link rel="stylesheet" crossorigin="" href="./css/blockhead.min.css?v=1755802992971">
-		<link rel="stylesheet" crossorigin="" href="./css/input.min.css?v=1755802992971">
-		<link rel="stylesheet" crossorigin="" href="./css/serve.min.css?v=1755802992971">
-		<link rel="stylesheet" crossorigin="" href="./css/account-choose.min.css?v=1755802992971">
+		<script type="module" crossorigin="" src="./js/app.min.js?v=1755847700353"></script>
+		<script type="module" crossorigin="" src="./js/dynamic.min.js?v=1755847700353"></script>
+		<script type="module" crossorigin="" src="./js/tabs.min.js?v=1755847700353"></script>
+		<script type="module" crossorigin="" src="./js/base.min.js?v=1755847700353"></script>
+		<script type="module" crossorigin="" src="./js/popup.min.js?v=1755847700353"></script>
+		<script type="module" crossorigin="" src="./js/blockhead.min.js?v=1755847700353"></script>
+		<script type="module" crossorigin="" src="./js/input.min.js?v=1755847700353"></script>
+		<script type="module" crossorigin="" src="./js/serve.min.js?v=1755847700353"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1755847700353">
+		<link rel="stylesheet" crossorigin="" href="./css/tabs.min.css?v=1755847700353">
+		<link rel="stylesheet" crossorigin="" href="./css/base.min.css?v=1755847700353">
+		<link rel="stylesheet" crossorigin="" href="./css/popup.min.css?v=1755847700353">
+		<link rel="stylesheet" crossorigin="" href="./css/blockhead.min.css?v=1755847700353">
+		<link rel="stylesheet" crossorigin="" href="./css/input.min.css?v=1755847700353">
+		<link rel="stylesheet" crossorigin="" href="./css/serve.min.css?v=1755847700353">
+		<link rel="stylesheet" crossorigin="" href="./css/account-choose.min.css?v=1755847700353">
 	</head>
 	<body body-aside="">
 		<div class="wrapper">
@@ -98,9 +98,14 @@
 									<div class="body-choose__body">
 										<div class="body-choose__aside">
 											<div class="body-choose__label">ПВЗ для получения в г. Донецк</div>
-											<div class="body-choose__search">
-												<button type="button" class="body-choose__btn-search body-choose__btn-search--icon-search"></button>
-												<input data-fls-input="" autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Поиск" class="body-choose__input">
+											<div class="body-choose__search search">
+												<button type="button" class="search__button search__button--search search__button--icon-search"></button>
+												<button type="button" class="search__button search__button--cancel">
+													<svg width="16" height="16" viewbox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.25 1.75L1.75 12.25M12.25 12.25L1.75 1.75" stroke="#212D3F" stroke-width="2" stroke-linecap="round"></path>
+													</svg>
+												</button>
+												<input data-fls-input="" autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Поиск" class="search__input input">
 											</div>
 											<div class="body-choose__list">
 												<div class="body-choose__item">

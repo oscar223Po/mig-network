@@ -12,7 +12,9 @@ textarea {
   width: 100%;
   outline: none;
   display: block;
+  font-size: 0.875rem;
   padding: 0 1rem;
+  line-height: 1.2;
   min-height: 2.8125rem;
   border-radius: 0.625rem;
   caret-color: inherit;
@@ -85,27 +87,44 @@ textarea.input {
   rotate: -90deg;
   font-weight: 700;
 }
+.search {
+  overflow: hidden;
+  position: relative;
+}
+.search__button {
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.search__button--search {
+  left: 0.9375rem;
+  transition: opacity 0.3s;
+}
+.search__button--cancel {
+  right: 0.9375rem;
+  opacity: 0;
+  visibility: hidden;
+}
+.search__button--cancel svg path {
+  transition: stroke 0.3s;
+}
+.search__button--cancel.active-clear {
+  opacity: 1;
+  visibility: visible;
+}
+.search__input {
+  padding: 0rem 2.625rem;
+}
 @media (max-width: 29.99875em){
   .input {
     padding: 0 0.75rem;
   }
   textarea.input {
     padding: 0.625rem 0.75rem;
-  }
-}
-@media (max-width: 20em){
-  .input {
-    font-size: 0.875rem;
-  }
-}
-@media (min-width: 20em) and (max-width: 81.875em){
-  .input {
-    font-size: clamp( 0.875rem , 0.83459595959375rem  +  0.202020202vw , 1rem );
-  }
-}
-@media (min-width: 81.875em){
-  .input {
-    font-size: 1rem;
   }
 }
 @media (any-hover: hover){
@@ -120,5 +139,11 @@ textarea.input {
   }
   .file:hover .file__label span {
     text-decoration: none;
+  }
+  .search__button--search:hover {
+    opacity: 0.7;
+  }
+  .search__button--cancel:hover svg path {
+    stroke: #ca0707;
   }
 }

@@ -121,6 +121,9 @@
   border-radius: 0.25rem 0.25rem 0 0;
   padding: 0.3125rem 0rem 0.625rem 0rem;
 }
+.select.--select-multiple {
+  cursor: pointer;
+}
 .--select-tag {
   cursor: pointer;
 }

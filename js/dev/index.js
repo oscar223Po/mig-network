@@ -1,10 +1,9 @@
 import "./app.min.js";
 import "./tabs.min.js";
-import "./select.min.js";
+import "./mask.min.js";
 import { d as dataMediaQueries, s as slideToggle, a as slideUp, b as bodyUnlock, c as bodyLock, e as bodyLockStatus } from "./dynamic.min.js";
 import "./blockhead.min.js";
 import "./input.min.js";
-import "./mask.min.js";
 /* empty css             */
 /* empty css         */
 const video = document.querySelector(".video__inner");
