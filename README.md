@@ -5,15 +5,16 @@ The main goal of development was to create a **lightweight, user-friendly, and m
 
 ---
 
-## 📸 Preview
+## 🖼 Preview
 ![Preview](preview.png)
 
 ---
 
 ## 🎯 Project Goals
-- ✅ Create a user-friendly website reflecting the company's services  
-- ⚡ Ensure fast loading speed and cross-browser compatibility  
-- 🛠️ Maintain a clean code structure for easy improvements and scalability  
+- ✅ Build a user-friendly and adaptive website with responsive design that reflects the company’s services
+- ✨ Add personality and liveliness to the site through pure JavaScript animations
+- ⚡ Ensure high loading speed and cross-browser compatibility (Google Chrome, Safari, Yandex Browser, Opera, Edge, Brave, etc.)
+- 🛠 Develop clean, valid, and maintainable code using only standard web technologies to guarantee stability and performance
 
 ---
 
@@ -32,14 +33,14 @@ The main goal of development was to create a **lightweight, user-friendly, and m
 ---
 
 ## 🛠️ Tech Stack
-| Technology  | Purpose |
-|-------------|---------|
-| **HTML5**   | Structure |
-| **CSS3 / SCSS** | Styling & maintainability |
-| **BEM**     | Clean and scalable code |
-| **Flexbox & Grid** | Responsive design |
-| **JavaScript** | Dynamic functionality |
-| **Gulp & Webpack** | Build automation |
+| Technology         | Purpose                   |
+| ------------------ | ------------------------- |
+| **HTML5**          | Structure & semantics     |
+| **CSS3 / SCSS**    | Styling & maintainability |
+| **BEM**            | Clean and scalable code   |
+| **Flexbox & Grid** | Responsive design         |
+| **JavaScript**     | Dynamic functionality     |
+| **Gulp & Webpack** | Build automation          |
 
 ---
 
