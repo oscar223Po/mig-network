@@ -11,7 +11,8 @@ The main goal of development was to create a **lightweight, user-friendly, and m
 
 ---
 
-## 🎯 Project Goals
+<h3>🎯 Project Goals</h3>
+
 - ✅ Build a user-friendly and adaptive website with responsive design that reflects the company’s services
 - ✨ Add personality and liveliness to the site through pure JavaScript animations
 - ⚡ Ensure high loading speed and cross-browser compatibility (Google Chrome, Safari, Yandex Browser, Opera, Edge, Brave, etc.)
@@ -19,7 +20,8 @@ The main goal of development was to create a **lightweight, user-friendly, and m
 
 ---
 
-## 🧩 Development Features
+<h3>🧩 Development Features</h3>
+
 - 📐 Semantic **HTML5** markup for well-structured and accessible architecture  
 - 🎨 **CSS3 + SCSS (Sass)** for styling with modularity and reusability  
 - 🏷️ **BEM methodology** for organized class naming and scalability  
@@ -33,7 +35,8 @@ The main goal of development was to create a **lightweight, user-friendly, and m
 
 ---
 
-## 🛠️ Tech Stack
+<h3>🛠️ Tech Stack</h3>
+
 | Technology         | Purpose                   |
 | ------------------ | ------------------------- |
 | **HTML5**          | Structure & semantics     |
