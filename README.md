@@ -13,9 +13,9 @@ The main goal of development was to create a **lightweight, user-friendly, and m
 
 <h3>🎯 Project Goals</h3>
 
-✅ Build a user-friendly and adaptive website with responsive design that reflects the company’s services
-✨ Add personality and liveliness to the site through pure JavaScript animations
-⚡ Ensure high loading speed and cross-browser compatibility (Google Chrome, Safari, Yandex Browser, Opera, Edge, Brave, etc.)
+- ✅ Build a user-friendly and adaptive website with responsive design that reflects the company’s services
+- ✨ Add personality and liveliness to the site through pure JavaScript animations
+- ⚡ Ensure high loading speed and cross-browser compatibility (Google Chrome, Safari, Yandex Browser, Opera, Edge, Brave, etc.)
 - 🛠 Develop clean, valid, and maintainable code using only standard web technologies to guarantee stability and performance
 
 ---
