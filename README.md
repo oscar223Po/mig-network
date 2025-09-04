@@ -6,7 +6,6 @@ The main goal of development was to create a **lightweight, user-friendly, and m
 ---
 
 ## 🖼 Preview
-
 ![Preview](preview.png)
 
 ---

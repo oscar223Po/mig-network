@@ -1674,6 +1674,9 @@ body::after {
   .spollers__item:hover {
     background: #f8f8f8;
   }
+  .spollers__item[open]:hover {
+    background: #212d3f;
+  }
   .spollers__body p a:hover {
     text-decoration: underline;
   }
