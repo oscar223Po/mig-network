@@ -5,7 +5,7 @@ The main goal of development was to create a **lightweight, user-friendly, and m
 
 ---
 
-<h2>🖼 Preview</h2>
+<h3>🖼 Preview</h3>
 
 ![Preview](preview.png)
 
