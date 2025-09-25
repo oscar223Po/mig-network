@@ -1,4 +1,4 @@
-# 📦 Mig Network – Your Reliable Pick-up Point Solution
+# 🚀 Mig Network Website – Your Reliable Pick-up Point Solution
 
 This project is a **responsive website** for a logistics company that provides parcel pickup services from marketplaces (Wildberries, Ozon, Yandex Market).  
 The main goal of development was to create a **lightweight, user-friendly, and maintainable** web application that showcases the company’s services and delivers a modern user interface.
